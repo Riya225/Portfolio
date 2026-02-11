@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio website showcasing projects, skills, and experience">
+    <title>Portfolio - Riya</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="navbar-logo">
+                <a href="#home">Portfolio</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                    <span class="theme-icon">🌙</span>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Open mobile menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Hi, I'm Riya</h1>
+                <p class="hero-subtitle">Frontend Developer | Data Analyst | Problem Solver</p>
+                <p class="hero-description">Results-driven developer with expertise in HTML, CSS, JavaScript, and data
+                    analysis tools.
+                    I aim to create impactful digital solutions that combine performance, usability, and modern design.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="assets/resume.pdf" class="btn btn-secondary" download>Download Resume</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>Welcome to my portfolio! I'm a passionate developer with a keen eye for design and a
+                            commitment to writing clean, efficient code.</p>
+                        <p>With experience in full-stack web development, I've worked on projects ranging from small
+                            business websites to complex applications. I'm always eager to learn new technologies and
+                            face interesting challenges.</p>
+                        <p>When I'm not coding, you can find me exploring new design trends, contributing to open-source
+                            projects, or enjoying outdoor activities.</p>
+                    </div>
+                    <div class="about-image">
+                        <img src="assets/images/profile.jpeg" alt="Profile photo" class="profile-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Skills & Expertise</h2>
+                <div class="skills-grid" id="skillsContainer">
+                    <!-- Skills will be loaded from skills.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+
+                <div class="search-box">
+                    <input type="text" id="searchInput" class="search-input"
+                        placeholder="Search projects by name or technology..." aria-label="Search projects">
+                    <button class="search-clear" id="searchClear" aria-label="Clear search">✕</button>
+                </div>
+
+                <div class="projects-grid" id="projectsContainer">
+                    <!-- Projects will be loaded from projects.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section id="certifications" class="certifications">
+            <div class="container">
+                <h2 class="section-title">Certifications & Credentials</h2>
+                <div class="certifications-list" id="certificationsContainer">
+                    <!-- Certifications will be loaded from certifications.json -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="contact-subtitle">Have a project in mind or want to collaborate? I'd love to hear from you!
+                </p>
+
+                <div class="contact-wrapper">
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID"
+                        method="POST">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+
+                    <div class="contact-info">
+                        <h3>Contact Info</h3>
+                        <p>
+                            <strong>Email:</strong><br>
+                            <a href="mailto:riyamittal2447@gmail.com">riyamittal2447@gmail.com</a>
+                        </p>
+                        <p>
+                            <strong>Phone:</strong><br>
+                            <a href="tel:7064217000">+91 7064217000</a>
+                        </p>
+                        <div class="social-links">
+                            <h3>Follow Me</h3>
+                            <a href="https://github.com/Riya225" target="_blank" rel="noopener noreferrer"
+                                aria-label="GitHub">GitHub</a>
+                            <a href="https://www.linkedin.com/in/mittalriya/" target="_blank" rel="noopener noreferrer"
+                                aria-label="LinkedIn">LinkedIn</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; Riya. All rights reserved.</p>
+            <p>Designed & Built with ❤️</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

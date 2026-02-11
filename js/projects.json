@@ -1,0 +1,76 @@
+[
+    {
+        "id": 1,
+        "title": "Sales and Customer Insights Dashboard",
+        "description": "Developed an interactive Sales and Customer Insights Dashboard to analyze key metrics including total sales, profit, orders, and regional performance. Implemented dynamic filters and clear visualizations to support data-driven decision-making.",
+        "image": "assets/images/dashboard.jpg",
+        "pdf": "assets/pdfs/dashboard.pdf",
+        "technologies": [
+            "Power BI",
+            "Microsoft Excel",
+            "Data Visualization"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "PDF Merger Pro (Desktop Application)",
+        "description": "Developed a desktop-based PDF Merger application using Python and Tkinter that allows users to combine multiple PDF files into a single document through a simple and user-friendly interface.",
+        "image": "assets/images/pdf-merger.jpg",
+        "pdf": "assets/pdfs/pdf-merger.pdf",
+        "technologies": [
+            "Python",
+            "Tkinter",
+            "PyPDF2"
+        ]
+    },
+    {
+        "id": 3,
+        "title": "Weather Web Application",
+        "description": "Developed a responsive weather web application using HTML, CSS, and JavaScript with OpenWeather API integration to display real-time weather data by city.",
+        "image": "assets/images/weather-app.jpg",
+        "pdf": "assets/pdfs/weather-app.pdf",
+        "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "OpenWeather API"
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Sorting Algorithm Visualizer",
+        "description": "An interactive web-based application that visualizes sorting algorithms such as Bubble Sort and Merge Sort.",
+        "image": "assets/images/sorting.png",
+        "pdf": "assets/pdfs/sorting.pdf",
+        "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Amazon Clone (E-Commerce Website)",
+        "description": "Developed a responsive Amazon Clone using HTML, CSS, and JavaScript featuring a dynamic homepage layout, product categories, navigation bar, and shopping cart interface.",
+        "image": "assets/images/amazon.png",
+        "pdf": "assets/pdfs/amazon.pdf",
+        "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Bootstrap"
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Spotify Clone (Music Streaming Web App)",
+        "description": "Developed a responsive Spotify Clone featuring music playlists and an interactive music player interface.",
+        "image": "assets/images/spotify.png",
+        "pdf": "assets/pdfs/spotify.pdf",
+        "technologies": [
+            "HTML",
+            "CSS",
+            "JavaScript"
+        ]
+    }
+]
