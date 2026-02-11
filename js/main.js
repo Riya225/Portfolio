@@ -238,7 +238,7 @@ searchClear.addEventListener('click', () => {
 });
 
 // ============================================
-// LOAD SKILLS FROM JSON
+// LOAD SKILLS FROM JSON (Without Levels)
 // ============================================
 
 async function loadSkills() {
@@ -257,7 +257,7 @@ async function loadSkills() {
     } catch (error) {
         console.error('Error loading skills:', error);
         document.getElementById('skillsContainer').innerHTML = 
-            '<p style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary);">Failed to load skills. Please check skills.json file.</p>';
+            '<p style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary);">Failed to load skills.</p>';
     }
 }
 
@@ -266,58 +266,20 @@ function createSkillCategory(category) {
     categoryDiv.className = 'skill-category';
     
     const skillsHTML = category.skills.map(skill => `
-        <div class="skill-item">
-            <div class="skill-name">
-                <span>${skill.name}</span>
-                <span class="skill-level">${skill.level}%</span>
-            </div>
-            <div class="skill-bar">
-                <div class="skill-progress" style="width: 0%; animation: growWidth 1s ease-out forwards;" 
-                     data-width="${skill.level}%"></div>
-            </div>
-        </div>
+        <span class="skill-tag">${skill}</span>
     `).join('');
     
     categoryDiv.innerHTML = `
         <h3>${category.category}</h3>
-        ${skillsHTML}
+        <div class="skill-tags-container">
+            ${skillsHTML}
+        </div>
     `;
     
     return categoryDiv;
 }
 
-// Add CSS animation for skill bar width growth
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes growWidth {
-        from { width: 0%; }
-        to { width: var(--width); }
-    }
-`;
-document.head.appendChild(style);
-
-// Observe skill bars and animate them when visible
-document.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        loadSkills();
-        animateSkillBars();
-    }, 100);
-});
-
-function animateSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-progress');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const width = entry.target.getAttribute('data-width');
-                entry.target.style.width = width;
-                observer.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    skillBars.forEach(bar => observer.observe(bar));
-}
+document.addEventListener('DOMContentLoaded', loadSkills);
 
 // ============================================
 // LOAD CERTIFICATIONS FROM JSON
